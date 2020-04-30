@@ -15,6 +15,7 @@ private asigancioncursosalumno nuevaVentana3;
 private asignacioncursosmaestro nuevaVentana4;
 private mantsedes nuevaVentana5;
 private mantsecciones nuevaVentana6;
+private mantaulas nuevaVentana7;
     /**
      * Creates new form prototipo
      */
@@ -118,6 +119,11 @@ private mantsecciones nuevaVentana6;
         jMenu2.add(jMenuItem6);
 
         jMenuItem7.setText("MANT. AULAS");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem7);
 
         jMenuItem8.setText("MANT. JORNADAS ");
@@ -191,6 +197,11 @@ private mantsecciones nuevaVentana6;
         nuevaVentana5=new mantsedes();
         jDesktopPane1.add(nuevaVentana5);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        nuevaVentana7=new mantaulas();
+        jDesktopPane1.add(nuevaVentana7);
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     /**
      * @param args the command line arguments
