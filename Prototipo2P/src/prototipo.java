@@ -17,6 +17,8 @@ private mantsedes nuevaVentana5;
 private mantsecciones nuevaVentana6;
 private mantaulas nuevaVentana7;
 private mantjornadas nuevaVentana8;
+private mantcursos nuevaVentana9;
+
     /**
      * Creates new form prototipo
      */
@@ -136,9 +138,19 @@ private mantjornadas nuevaVentana8;
         jMenu2.add(jMenuItem8);
 
         jMenuItem9.setText("MANT. CURSOS");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem9);
 
         jMenuItem10.setText("MANT. CARRERAS");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem10);
 
         jMenuItem11.setText("MANT. AULAS");
@@ -213,6 +225,15 @@ private mantjornadas nuevaVentana8;
         nuevaVentana8=new mantjornadas();
         jDesktopPane1.add(nuevaVentana8);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        nuevaVentana9=new mantcursos();
+        jDesktopPane1.add(nuevaVentana9);
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+       
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     /**
      * @param args the command line arguments
