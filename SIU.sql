@@ -94,6 +94,7 @@ CREATE TABLE aulas
   PRIMARY KEY (codigo_aula)
 ) ENGINE = InnoDB DEFAULT CHARSET=latin1;
 select * from aulas;
+
 CREATE TABLE jornadas
 (
 	codigo_jornada VARCHAR(5),
@@ -101,6 +102,8 @@ CREATE TABLE jornadas
     estatus_jornada VARCHAR(1),
     PRIMARY KEY (codigo_jornada)
 ) ENGINE=INNODB DEFAULT CHARSET=latin1;
+select *from jornadas;
+
 -- -----------------------------------------------------
 -- Table `educativo`.`Asignacion_cursos_alumnos`
 -- -----------------------------------------------------
