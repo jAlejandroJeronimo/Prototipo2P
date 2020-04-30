@@ -171,7 +171,7 @@ public class mantcarreras extends javax.swing.JInternalFrame {
             pst.setString(1, codcarrera.getText().trim());
             pst.setString(2, nocarrera.getText().trim());
             pst.setString(3, codfacul.getText().trim());
-            pst.setString(3, stacarreras.getText().trim());
+            pst.setString(4, stacarreras.getText().trim());
             pst.executeUpdate();
 
             codcarrera.setText("");
@@ -212,7 +212,7 @@ public class mantcarreras extends javax.swing.JInternalFrame {
             String Codigo = codcarrera.getText().trim();
 
             java.sql.Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3307/siu", "root", "");
-            PreparedStatement pst = cn.prepareStatement("update cursos set nombre_carrera = ?, codigo_facultad = ?, estatus_carrera = ? where codigo_carrera = " + Codigo);
+            PreparedStatement pst = cn.prepareStatement("update carreras set nombre_carrera = ?, codigo_facultad = ?, estatus_carrera = ? where codigo_carrera = " + Codigo);
 
             pst.setString(1, nocarrera.getText().trim());
             pst.setString(2, codfacul.getText().trim());
