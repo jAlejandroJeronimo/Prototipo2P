@@ -1,5 +1,4 @@
 
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,12 +14,12 @@ import javax.swing.JOptionPane;
  *
  * @author Alejandro
  */
-public class mantalumnos extends javax.swing.JInternalFrame {
+public class asigancioncursosalumno extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form mantalumnos
+     * Creates new form asigancioncursosalumno
      */
-    public mantalumnos() {
+    public asigancioncursosalumno() {
         initComponents();
     }
 
@@ -33,43 +32,44 @@ public class mantalumnos extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        txt_carnet = new javax.swing.JTextField();
-        nombre = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        direccion = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        telefono = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        email = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        estatus = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         label_status = new javax.swing.JLabel();
-
-        jTextField1.setText("jTextField1");
+        codsec = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        codau = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        codcur = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        codcarrera = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        codsede = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        codjor = new javax.swing.JTextField();
+        codal = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
         setVisible(true);
 
-        jLabel1.setText("carnet");
+        jButton4.setText("ELIMINAR");
 
-        jLabel2.setText("nombre");
+        jLabel3.setText("codigo jornada");
 
-        jLabel3.setText("direccion");
+        label_status.setText("...");
 
-        jLabel4.setText("telefono");
+        jLabel4.setText("codigo seccion");
 
-        jLabel5.setText("email");
+        jLabel5.setText("codigo aula");
 
-        jLabel6.setText("estatus");
+        jLabel1.setText("codigo de carrera");
+
+        jLabel6.setText("codigo curso");
 
         jButton1.setText("REGISTRAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -85,6 +85,8 @@ public class mantalumnos extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel2.setText("codigo de sede");
+
         jButton3.setText("MODIFICAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,14 +94,7 @@ public class mantalumnos extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton4.setText("ELIMINAR");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-
-        label_status.setText("...");
+        jLabel7.setText("codigo alumno");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -113,31 +108,35 @@ public class mantalumnos extends javax.swing.JInternalFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addGap(103, 103, 103)
-                                .addComponent(estatus, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(codcur, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addGap(103, 103, 103)
-                                .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(codau, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addGap(103, 103, 103)
-                                .addComponent(telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(codsec, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addGap(103, 103, 103)
-                                .addComponent(direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(codjor, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(103, 103, 103)
-                                .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(codsede, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(103, 103, 103)
-                                .addComponent(txt_carnet, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(codcarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(103, 103, 103)
+                                .addComponent(codal, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton2))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
+                        .addGap(6, 6, 6)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(label_status)
                             .addGroup(layout.createSequentialGroup()
@@ -146,7 +145,7 @@ public class mantalumnos extends javax.swing.JInternalFrame {
                                 .addComponent(jButton3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton4)))))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,36 +153,40 @@ public class mantalumnos extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txt_carnet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(codcarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(codsede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(codjor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(codsec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(codau, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(estatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                    .addComponent(codcur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(codal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3)
                     .addComponent(jButton4))
                 .addGap(18, 18, 18)
                 .addComponent(label_status)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addGap(39, 39, 39))
         );
 
         pack();
@@ -192,66 +195,46 @@ public class mantalumnos extends javax.swing.JInternalFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //Codigo que permite insertar registros en al base de datos
         try{
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3307/siu", "root", "");//conecta a MYSQL
-            PreparedStatement pst = cn.prepareStatement("insert into alumnos values(?,?,?,?,?,?)");
+            Connection cn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3307/siu", "root", "");//conecta a MYSQL
+            PreparedStatement pst = cn.prepareStatement("insert into asignacioncursosalumnos values(?,?,?,?,?,?)");
 
-            pst.setString(1, txt_carnet.getText().trim());
-            pst.setString(2, nombre.getText().trim());
-            pst.setString(3, direccion.getText().trim());
-            pst.setString(4, telefono.getText().trim()); 
-            pst.setString(5, email.getText().trim()); 
-            pst.setString(6, estatus.getText().trim()); 
+            pst.setString(1, codcarrera.getText().trim());
+            pst.setString(2, codsede.getText().trim());
+            pst.setString(3, codjor.getText().trim());
+            pst.setString(4, codsec.getText().trim());
+            pst.setString(5, codau.getText().trim());
+            pst.setString(6, codcur.getText().trim());
             pst.executeUpdate();
 
-            txt_carnet.setText("");
-            nombre.setText("");
-            direccion.setText("");
-            telefono.setText("");
-            email.setText("");
-            estatus.setText("");
+            codcarrera.setText("");
+            codsede.setText("");
+            codjor.setText("");
+            codsec.setText("");
+            codau.setText("");
+            codcur.setText("");
             label_status.setText("REGISTRADO");
         }catch (Exception e){
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        //Codigo que permite actualizar registros en la base de datos
-        try {
-            String Codigo = txt_carnet.getText().trim();
-
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3307/siu", "root", "");
-            PreparedStatement pst = cn.prepareStatement("update alumnos set nombre_alumno = ?, direccion_alumno = ?, telefono_alumno = ?, email_alumno = ?, estatus_alumno = ? where carnet_alumno = " + Codigo);
-
-            pst.setString(1, nombre.getText().trim());
-            pst.setString(2, direccion.getText().trim());
-            pst.setString(3, telefono.getText().trim()); 
-            pst.setString(4, email.getText().trim()); 
-            pst.setString(5, estatus.getText().trim());
-            pst.executeUpdate();
-
-            label_status.setText("Modificación exitosa");
-
-        } catch (Exception e) {
-        }
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         //Codigo que permite consultar registros en la base de datos
         try{
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3307/siu", "root", "");
-            PreparedStatement pst = cn.prepareStatement("select * from alumnos where carnet_alumno = ?");
-            pst.setString(1, txt_carnet.getText().trim());
-            
+            Connection cn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3307/siu", "root", "");
+            PreparedStatement pst = cn.prepareStatement("select * from asignacioncursosalumnos where codigo_carrera = ?");
+            pst.setString(1, codcarrera.getText().trim());
+
             ResultSet rs = pst.executeQuery();
 
             if(rs.next()){
-            
-                nombre.setText(rs.getString("nombre_alumno"));
-                direccion.setText(rs.getString("direccion_alumno"));
-                telefono.setText(rs.getString("telefono_alumno"));
-                email.setText(rs.getString("email_alumno"));
-                estatus.setText(rs.getString("estatus_alumno"));
-                
+
+                codsede.setText(rs.getString("codigo_sede"));
+                codjor.setText(rs.getString("codigo_jornada"));
+                codsec.setText(rs.getString("codigo_seccion"));
+                codau.setText(rs.getString("codigo_aula"));
+                codcur.setText(rs.getString("codigo_curso"));
+                codal.setText(rs.getString("carnet_alumno"));
+
             } else {
                 JOptionPane.showMessageDialog(null, "NO ESTA REGISTRADO");
             }
@@ -261,31 +244,19 @@ public class mantalumnos extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        //Codigo que permite borrar registros en la base de datos
-        try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3307/siu", "root", "");
-            PreparedStatement pst = cn.prepareStatement("delete from alumnos where carnet_alumno = ?");
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
-            pst.setString(1, txt_carnet.getText().trim());
-            pst.executeUpdate();
-
-            nombre.setText("");
-            direccion.setText("");
-            telefono.setText("");
-            email.setText("");
-            estatus.setText("");
-            label_status.setText("ELIMINADO");
-
-        } catch (Exception e) {
-        }
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_jButton3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField direccion;
-    private javax.swing.JTextField email;
-    private javax.swing.JTextField estatus;
+    private javax.swing.JTextField codal;
+    private javax.swing.JTextField codau;
+    private javax.swing.JTextField codcarrera;
+    private javax.swing.JTextField codcur;
+    private javax.swing.JTextField codjor;
+    private javax.swing.JTextField codsec;
+    private javax.swing.JTextField codsede;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -296,10 +267,7 @@ public class mantalumnos extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel label_status;
-    private javax.swing.JTextField nombre;
-    private javax.swing.JTextField telefono;
-    private javax.swing.JTextField txt_carnet;
     // End of variables declaration//GEN-END:variables
 }

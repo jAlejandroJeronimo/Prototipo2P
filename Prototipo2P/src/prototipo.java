@@ -9,7 +9,10 @@
  * @author Alejandro
  */
 public class prototipo extends javax.swing.JFrame {
-
+private mantalumnos nuevaVentana;
+private mantmaestros nuevaVentana2;
+private asigancioncursosalumno nuevaVentana3;
+private asignacioncursosmaestro nuevaVentana4;
     /**
      * Creates new form prototipo
      */
@@ -65,12 +68,27 @@ public class prototipo extends javax.swing.JFrame {
         jMenu2.setText("CATALOGOS");
 
         jMenuItem1.setText("MANT. ALUMNOS");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem1);
 
         jMenuItem2.setText("MANT. MAESTROS");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem2);
 
         jMenuItem3.setText("MANT. ASIGNACION DE CURSOS ALUMNOS");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem3);
 
         jMenuItem4.setText("MANT. ASIGNACION DE CURSOS MAESTROS");
@@ -138,12 +156,28 @@ public class prototipo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here:
+        nuevaVentana4=new asignacioncursosmaestro();
+        jDesktopPane1.add(nuevaVentana4);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+         nuevaVentana=new mantalumnos();
+        jDesktopPane1.add(nuevaVentana);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        nuevaVentana2=new mantmaestros();
+        jDesktopPane1.add(nuevaVentana2);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        nuevaVentana3=new asigancioncursosalumno();
+        jDesktopPane1.add(nuevaVentana3);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
