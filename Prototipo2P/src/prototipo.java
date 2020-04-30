@@ -18,7 +18,7 @@ private mantsecciones nuevaVentana6;
 private mantaulas nuevaVentana7;
 private mantjornadas nuevaVentana8;
 private mantcursos nuevaVentana9;
-
+private mantcarreras nuevaVentana10;
     /**
      * Creates new form prototipo
      */
@@ -232,7 +232,8 @@ private mantcursos nuevaVentana9;
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
-       
+       nuevaVentana10=new mantcarreras();
+        jDesktopPane1.add(nuevaVentana10);
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     /**

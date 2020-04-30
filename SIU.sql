@@ -51,6 +51,7 @@ CREATE TABLE carreras
   PRIMARY KEY (codigo_carrera),
   FOREIGN KEY (codigo_facultad) REFERENCES facultades(codigo_facultad)
 ) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+select * from carreras;
 -- -----------------------------------------------------
 -- Table `educativo`.`Cursos`
 -- -----------------------------------------------------
@@ -61,6 +62,8 @@ CREATE TABLE cursos
   estatus_curso VARCHAR(1),
   PRIMARY KEY (codigo_curso)
  ) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+ select * from cursos;
+ 
 -- -----------------------------------------------------
 -- Table `educativo`.`Secciones`
 -- -----------------------------------------------------
