@@ -14,6 +14,7 @@ private mantmaestros nuevaVentana2;
 private asigancioncursosalumno nuevaVentana3;
 private asignacioncursosmaestro nuevaVentana4;
 private mantsedes nuevaVentana5;
+private mantsecciones nuevaVentana6;
     /**
      * Creates new form prototipo
      */
@@ -167,7 +168,8 @@ private mantsedes nuevaVentana5;
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
+        nuevaVentana6=new mantsecciones();
+        jDesktopPane1.add(nuevaVentana6);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
