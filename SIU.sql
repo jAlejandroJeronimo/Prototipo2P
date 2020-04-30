@@ -13,7 +13,7 @@ CREATE TABLE alumnos
   estatus_alumno VARCHAR(1),
   PRIMARY KEY (carnet_alumno)
 ) ENGINE = InnoDB DEFAULT CHARSET=latin1;
-
+select * from alumnos;
 -- -----------------------------------------------------
 -- Table `educativo`.`Maestros`
 -- -----------------------------------------------------
@@ -27,6 +27,7 @@ CREATE TABLE maestros
   estatus_maestro VARCHAR(1),
   PRIMARY KEY (codigo_maestro)
  ) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+ select * from maestros;
 -- -----------------------------------------------------
 -- Table `educativo`.`Facultades`
 -- -----------------------------------------------------
@@ -37,6 +38,7 @@ CREATE TABLE facultades
   estatus_facultad VARCHAR(1),
   PRIMARY KEY (codigo_facultad)
 ) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+select * from facultades;
 -- -----------------------------------------------------
 -- Table `educativo`.`Carreras`
 -- -----------------------------------------------------
@@ -79,6 +81,7 @@ CREATE TABLE sedes
   estatus_sede VARCHAR(1),
   PRIMARY KEY (codigo_sede)
 ) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+select * from sedes;
 -- -----------------------------------------------------
 -- Table `educativo`.`Aulas`
 -- -----------------------------------------------------
@@ -119,6 +122,7 @@ CREATE TABLE asignacioncursosalumnos
   FOREIGN KEY (codigo_curso) REFERENCES cursos(codigo_curso),
   FOREIGN KEY (carnet_alumno) REFERENCES alumnos(carnet_alumno)
   ) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+  select * from asignacioncursosalumnos;
 -- -----------------------------------------------------
 -- Table `educativo`.`Asignacion_cursos_maestros`
 -- -----------------------------------------------------
